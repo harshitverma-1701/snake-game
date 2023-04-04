@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+/* Default styles */
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .body {
@@ -19,7 +22,6 @@
   top: 96vh;
   right: 25em;
   font-size: 25px;
-  
   font-family: "Indie Flower", cursive;
 }
 
@@ -69,3 +71,77 @@
   border: 0.25vmin solid black;
   border-radius: 8px;
 }
+
+/* Media queries for responsiveness */
+
+/* Small devices (portrait phones) */
+@media only screen and (max-width: 480px) {
+  #credits {
+    font-size: 20px;
+    right: 1em;
+  }
+  
+  #highscoreBox {
+    font-size: 24px;
+    right: 10px;
+  }
+  
+  #myscoreBox {
+    font-size: 24px;
+    right: 10px;
+    top: 40px;
+  }
+  
+  #board {
+    width: 80vw;
+    height: 80vw;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
+  .head {
+    border-radius: 7px;
+  }
+  
+  .snake {
+    border-radius: 9px;
+  }
+  
+  .food {
+    border-radius: 6px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #credits {
+    top: 90vh;
+    right: 0;
+    font-size: 20px;
+  }
+
+  #highscoreBox {
+    top: 9px;
+    right: 10px;
+    font-size: 20px;
+  }
+
+  #myscoreBox {
+    top: 60px;
+    right: 10px;
+    font-size: 20px;
+  }
+
+  #board {
+    width: 90vw;
+    height: 80vw;
+  }
+
+  .snake {
+    border-radius: 8px;
+  }
+
+  .food {
+    border-radius: 6px;
+  }
+}
+
